@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Week15_WardrobeProject_04192016.Models.Top>
+
+@{
+    ViewBag.Title = "View Tops";
+}
+
+<h2 class="form-title">View Tops</h2>
+
+<!--The Add button goes to the Add view and uses a glyphicon symbol -->
+<button class="btn btn-default btn-createnew"><span class="glyphicon glyphicon-plus-sign"></span> @Html.ActionLink("Add Top", "Create")
+</button>
+
+<div class="container">
+@foreach (var item in Model)
+{
+    <div class="container index-container"> <!-- A large container holds all item info -->
+
+        <div class="col-md-2"> <!-- First column holds the thumbnail photo -->
+            <div class="thumbnail">
+                <img src="@Html.DisplayFor(modelItem => item.Photo)" alt="@Html.DisplayFor(modelItem => item.Nickname)" class="img-thumbnail clothing-image">
+                <br />
+            </div>
+        </div> 
+
+        <div class="col-md-1 index-font"> <!-- Second column holds the labels -->
+            <p class="right-justify">
+                Nickname:<br />
+                Color:<br />
+                Type:<br />
+                Season:<br />
+                Occasion:<br />
+            </p>
+        </div>
+
+        <div class="col-md-3 index-font"> <!-- Third column holds the item properties -->
+            <p>
+                @Html.DisplayFor(modelItem => item.Nickname)<br />
+                @Html.DisplayFor(modelItem => item.Color)<br />
+                @Html.DisplayFor(modelItem => item.Type)<br />
+                @Html.DisplayFor(modelItem => item.Season)<br />
+                @Html.DisplayFor(modelItem => item.Occ)<br />
+            </p>
+        </div>
+
+        <div class="col-md-6"> <!-- Fourth column holds the buttons -->
+            <button class="btn btn-default btn-edit"><span class="glyphicon glyphicon-pencil"></span> @Html.ActionLink("Edit Top", "Edit", new { id = item.TopID })
+            </button> | <button class="btn btn-default btn-details"><span class="glyphicon glyphicon-info-sign"></span> 
+                @Html.ActionLink("View Top Details", "Details", new { id = item.TopID })
+            </button> | <button class="btn btn-default btn-delete"><span class="glyphicon glyphicon-remove-sign"></span> 
+                @Html.ActionLink("Delete Top", "Delete", new { id = item.TopID })
+            </button>
+        </div>
+
+    </div>
+}
+</div>
+

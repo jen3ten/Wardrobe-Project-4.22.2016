@@ -1,0 +1,153 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Evans custom CSS begins here */
+body{   /* sets the background color for all views */
+    background-color:aqua;
+}
+
+#nav-right{ /* moves the navigation bar buttons to the right */
+    float:right;
+}
+
+.index-background{  /* sets the background image for the home page !removed fixed! */
+    background:transparent url('/Images/closet with mom girl cropped.jpg') no-repeat;
+    height:600px;
+    background-position:center;
+    background-size:contain;
+}
+
+.index-title{   /* sets the size, color, position of 'My Virtual Closet' on home page */
+    font-size:140px;
+    color:hotpink;
+    position:absolute;
+    /* bottom:-80px; */
+    top:40px;
+    width: 100%;
+    text-align:center;
+    font-family:'Lobster';
+}
+
+.clothing-image{ /* sets the size of each thumbnail image on the View clothing pages */
+    /* padding:10px;
+    background-color:blue;*/
+    max-height:100%;
+    max-width:100%;
+    position:center;
+    padding:0px;
+    border:0px;
+    background-color:white;
+}
+
+.thumbnail {
+  display: inline-block;
+  display: block;
+  height: 100px;
+  width: 100px;
+  padding: 4px;
+  margin-top:10px;
+  line-height: 1.428571429;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+}
+
+.form-title{    /* sets the font style for the header on each page */
+    font-family:'Lobster'
+}
+
+.right-justify{
+    text-align:right;
+}
+
+.index-font{    /* sets the font style for the text on index ("view items") page */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:16px;
+}
+
+.index-container{   /* sets the size, display for each item in "view items" */
+    border-color:black;
+    border:solid;
+    margin:10px;
+    width:auto;
+    background-color:#d4d3d3;
+    padding:10px;
+    border-radius:10px;
+}
+
+.delete-header{ /* sets the display parameters on delete view */
+    color:red;
+    font-weight:bold;
+}
+
+.btn-delete {
+  color: red;
+  font-weight:bold;
+  background-color: #ffffff;
+  border-color: #000000;
+  margin:2px;
+}
+
+.btn-delete:hover{
+  color: #333333;
+  background-color: #fa5a5a;
+  border-color: #000000;
+}
+
+.btn-backtolist, .btn-details, .btn-createnew, .btn-edit {
+  color: blue;
+  font-weight:bold;
+  background-color: #ffffff;
+  border-color: #000000;
+  margin:2px;
+}
+
+.btn-createnew{
+  color: grey;
+  font-weight:bold;
+  background-color: #ffffff;
+  border-color: #000000;
+}
+
+/* The following code found online search for "add icon to input submit button" */
+/* It is used to place the glyphicon on the "Save Changes" button */
+.icon-input-btn{
+    display: inline-block;
+    position: relative;
+}
+.icon-input-btn input[type="submit"]{
+    padding-left: 2em;
+}
+.icon-input-btn .glyphicon{
+    display: inline-block;
+    position: absolute;
+    left: 0.65em;
+    top: 30%;
+}
+
+
+

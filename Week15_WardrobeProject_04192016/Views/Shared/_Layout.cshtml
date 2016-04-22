@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <title>@ViewBag.Title - My Virtual Closet</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("MVC: My Virtual Closet", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+
+            <div class="navbar-collapse collapse">
+
+                <!-- This original code was replaced with the dropdown buttons below
+                <ul class="nav navbar-nav" id="nav-right">
+                    <li>@Html.ActionLink("Tops", "Index", "Tops")</li>
+                    <li>@Html.ActionLink("Bottoms", "Index", "Bottoms")</li>
+                    <li>@Html.ActionLink("Shoes", "Index", "Shoes")</li>
+                    <li>@Html.ActionLink("Accessories", "Index", "Accessories")</li>
+                </ul>
+                -->
+
+                <!-- creates the dropdown buttons on the nav bar -->
+                <ul class="nav navbar-nav nav-tabs" id="nav-right">
+                    <!-- Tops dropdown button-->
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            Tops<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("View Tops", "Index", "Tops")</li>
+                            <li>@Html.ActionLink("Add Top", "Create", "Tops")</li>
+                        </ul>
+                    </li>
+
+                    <!-- Bottoms dropdown button-->
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            Bottoms<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("View Bottoms", "Index", "Bottoms")</li>
+                            <li>@Html.ActionLink("Add Bottom", "Create", "Bottoms")</li>
+                        </ul>
+                    </li>
+
+                    <!-- Shoes dropdown button-->
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            Shoes<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("View Shoes", "Index", "Shoes")</li>
+                            <li>@Html.ActionLink("Add Shoe", "Create", "Shoes")</li>
+                        </ul>
+                    </li>
+
+                    <!-- Accessories dropdown button-->
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            Accessories<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("View Accessories", "Index", "Accessories")</li>
+                            <li>@Html.ActionLink("Add Accessory", "Create", "Accessories")</li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div> 
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>April 22, 2016 - by Jennifer Evans</p>
+            <span class="glyphicon glyphicon-heart"></span> <a href="http://glyphicons.com/">www.glyphicons.com</a>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
