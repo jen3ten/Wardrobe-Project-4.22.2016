@@ -14,31 +14,29 @@ namespace Week15_WardrobeProject_04192016.Models
 
         /*The Nickname is required and limited to 30 characters*/
         [StringLength(30, ErrorMessage = "The nickname must not exceed 30 characters.")]
-        [Required]
+        [Required(ErrorMessage = "The nickname is required.")]
         public string Nickname { get; set; }
 
         /*The Photo is not required or limited in characters*/
         public string Photo { get; set; }
 
         /*The Type is required and limited to 15 characters*/
-        /*Later- attempt to limit to list related to the class*/
         [StringLength(15, ErrorMessage = "The type must not exceed 15 characters.")]
-        [Required]
+        [Required(ErrorMessage = "The type is required.")]
         public string Type { get; set; }
 
         /*The Color is required and limited to 15 characters*/
-        /*Later- attempt to limit to list of colors*/
         [StringLength(15, ErrorMessage = "The color must not exceed 15 characters.")]
-        [Required]
+        [Required(ErrorMessage = "The color is required.")]
         public string Color { get; set; }
 
         /*The Season is required*/
-        [Required]
+        [Required(ErrorMessage = "The season is required.")]
         public string Season { get; set; }
 
         /*The Occ property has a display name and is required*/
         [Display(Name = "Occasion")]
-        [Required]
+        [Required(ErrorMessage ="The occasion is required.")]
         public string Occ { get; set; }
 
     }

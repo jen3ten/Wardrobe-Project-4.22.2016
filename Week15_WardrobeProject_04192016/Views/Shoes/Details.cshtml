@@ -8,7 +8,7 @@
 
 <div>
     <hr />
-    <dl class="dl-horizontal">
+    <dl class="dl-horizontal">  <!-- table of item labels and values -->
         <dt>
             @Html.DisplayNameFor(model => model.Nickname)
         </dt>
@@ -59,7 +59,6 @@
 
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ShoeID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+<div>
+    <button class="btn btn-default btn-edit"><span class="glyphicon glyphicon-pencil"></span> @Html.ActionLink("Edit Shoes", "Edit", new { id = Model.ShoeID })</button> | <button class="btn btn-default btn-backtolist"><span class="glyphicon glyphicon-circle-arrow-left"></span> @Html.ActionLink("Back to List", "Index")</button>
+</div>

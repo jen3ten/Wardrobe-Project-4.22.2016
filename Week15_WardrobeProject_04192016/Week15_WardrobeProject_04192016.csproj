@@ -182,11 +182,15 @@
     <Content Include="Images\blue capri pant.jpg" />
     <Content Include="Images\Blue closet.jpg" />
     <Content Include="Images\brown belt.jpg" />
+    <Content Include="Images\brown shoe.jpg" />
+    <Content Include="Images\cami.jpg" />
     <Content Include="Images\cat shoes.jpg" />
     <Content Include="Images\closet with mom girl cropped.jpg" />
     <Content Include="Images\closet with mom girl.jpg" />
     <Content Include="Images\floral skirt.jpg" />
+    <Content Include="Images\jeans.jpg" />
     <Content Include="Images\pink hightops.jpg" />
+    <Content Include="Images\pink scarf.jpg" />
     <Content Include="Images\silver blue bangle.jpg" />
     <Content Include="Images\star_wars_tee.jpg" />
     <Content Include="Images\Yellow closet.jpg" />
